@@ -246,7 +246,7 @@ namespace IKVM.Reflection.Emit
 					throw new NotSupportedException();
 			}
 			MethodCodeType? type = customBuilder.GetFieldValue<MethodCodeType>("MethodCodeType");
-			implFlags = (MethodImplAttributes)opt;
+			implFlags |= (MethodImplAttributes)opt;
 			if (type.HasValue)
 			{
 				implFlags |= (MethodImplAttributes)type;
